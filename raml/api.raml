@@ -389,3 +389,34 @@ traits:
     description: Creates a new deployment.
     responses:
       201:
+
+
+/channels:
+  description: Channels Api
+  get:
+    is: ['paged']
+    responses:
+      200:
+  post:
+    is: ['validated']
+    description: Creates a new Channel
+    responses:
+      201:
+  /{id}:
+    get:
+      responses:
+        200:
+    delete:
+    put:
+      description: Modifies an existing channel
+    /releases:
+      get:
+        is: ['paged']
+        description: Get releases in a channel
+  /all:
+    get:
+      responses:
+        200:
+  /sortorder:
+    put:
+      description: Set the environments sort order
