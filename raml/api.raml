@@ -324,6 +324,15 @@ traits:
         get:
           responses:
             200:
+    /channels:
+      get:
+        is: ['paged']
+        responses:
+          200:
+      /{id}:
+        get:
+          responses:
+            200:
   /all:
     get:
       responses:
